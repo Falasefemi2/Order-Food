@@ -15,5 +15,6 @@ func main() {
 	fmt.Scan(&customerName)
 
 	greet(customerName)
+	orderItems()
 	sayTata(customerName)
 }
