@@ -30,11 +30,11 @@ var menu = []Menu{
 func printMenu() {
 	fmt.Printf("%15s\n", "Menu")
 	fmt.Printf("%s\n", strings.Repeat("-", 35))
-	fmt.Printf("%-7s %6s  %12s\n", "S.No", "Price", "Item Name")
+	fmt.Printf("%-7s %6s    %12s\n", "S.No.", "Price", "Item Name")
 	fmt.Printf("%s\n", strings.Repeat("-", 35))
 
 	for _, element := range menu {
-		fmt.Printf(" %-7d %.2f   %-4s\n", element.itemNo, element.itemPrice, element.itemName)
+		fmt.Printf(" %-7d %.2f    %-4s\n", element.itemNo, element.itemPrice, element.itemName)
 	}
 	fmt.Printf("%s", strings.Repeat("-", 35))
 	fmt.Println()

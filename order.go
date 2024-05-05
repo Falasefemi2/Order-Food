@@ -39,12 +39,16 @@ func orderItems() {
 			for index /*, item*/ := range menu {
 				if index+1 == int(itemNumber) { //convert optionNumber into int becoz it is of type uint
 					customerOrder[choiceName] += noOfPlates
+					//alternative way
+					//customerOrder[item.itemName] += noOfPlates // adding customerOrder[item.itemName] again in case you order that item again
 					subTotalBill += itemPrice * float64(noOfPlates)
+					//alternative way
+					//subTotalBill += item.itemPrice*noOfPlates
 					break
 				}
 			}
-			fmt.Printf("\nYou just ordered %v %v which amounts to $%v. \n", noOfPlates, choiceName, itemPrice*float64(noOfPlates))
-			// print what you ordered till now
+			fmt.Printf("\nYou just ordered %v %v which amounts to $%v.\n", noOfPlates, choiceName, itemPrice*float64(noOfPlates))
+			//print what you ordered till now
 			orderTillNow()
 		}
 		fmt.Println()
@@ -53,8 +57,8 @@ func orderItems() {
 
 // print it everytime you add an item
 func orderTillNow() {
-	// print what you've ordered till now
-	fmt.Println("\nYour order till now")
+	//Print what you've ordered till now
+	fmt.Println("\nYour order till now: ")
 	fmt.Printf("%s\n", strings.Repeat("-", 32))
 	fmt.Printf(" %-12s %s\n", "Quantity", "Item")
 	fmt.Printf("%s\n", strings.Repeat("-", 32))
