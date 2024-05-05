@@ -16,5 +16,8 @@ func main() {
 
 	greet(customerName)
 	orderItems()
+	displayGeneratingBill() //just displays that "generating bill" in a fancy manner.
+	generateBill()
+	printFinalBill()
 	sayTata(customerName)
 }
